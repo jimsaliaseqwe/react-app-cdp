@@ -1,0 +1,33 @@
+//Suggested location to add your overrides so that migration would be easy by just updating the SASS folder in the future
+@import "variables";
+
+.layout-sidebar {
+  border-radius: $borderRadius;
+}
+
+.p-column-filter-overlay-menu .p-column-filter-operator {
+  padding: 1rem;
+}
+
+.layout-menu .active {
+  background-color: #334155 !important;
+  color: #FFFFFF;
+}
+
+.layout-menu .active-menuitem.just-hover {
+  background-color: #1a2c46 !important;
+}
+
+.layout-menu .active-menuitem .active:not([href]) {
+  background-color: #1a2c46 !important;
+}
+
+.layout-menu .active-menuitem:not(.just-hover) .active:not([href]) {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.layout-menu .active-menuitem.just-hover .active:not([href]) {
+  opacity: unset;
+  pointer-events: auto;
+}

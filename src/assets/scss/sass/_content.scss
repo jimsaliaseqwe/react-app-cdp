@@ -1,0 +1,17 @@
+.layout-main-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh);
+  overflow: hidden;
+  justify-content: space-between;
+  padding-top: 5rem;
+  transition: margin-left $transitionDuration;
+}
+
+.layout-main {
+  flex: 1 1 auto;
+}
+
+.layout-main h4 {
+  font-size: 1.8rem;
+}

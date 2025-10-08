@@ -1,0 +1,26 @@
+/* Submenu slide-down animation */
+.layout-submenu-wrapper-enter {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.layout-submenu-wrapper-enter-active {
+  height: auto;
+  opacity: 1;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+}
+
+.layout-submenu-wrapper-exit {
+  height: auto;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.layout-submenu-wrapper-exit-active {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+}

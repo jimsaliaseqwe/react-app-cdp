@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body, #root, .cocos-container {
+    background: transparent !important;
+}
+
+.cocos-container {
+    position: relative;
+}
+
+.cocos-container iframe {
+    height: 100vh;
+    width: 100vw;
+    border: none;
+    display: block;
+}
+
+.qr-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 99;
+}

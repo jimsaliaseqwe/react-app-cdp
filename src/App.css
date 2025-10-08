@@ -1,0 +1,185 @@
+* {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    --landing-body-bg: #e2301d;
+    --hero-bg-light-mix-mode: multiply;
+    --hero-bg-light-1: linear-gradient(0deg, #fff 1.39%, #2c9f45);
+    --hero-bg-light-2: linear-gradient(0deg, #fff, #511378);
+    --hero-bg-light-3: linear-gradient(0deg, #fff, #fff);
+    --hero-bg-light-4: linear-gradient(0deg, #dbdbdb, #00a4e4);
+    --hero-box-bg: linear-gradient(116.22deg, #fff 33.5%, hsla(0, 0%, 100%, .58) 99.16%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.gradient-title {
+    background-image: linear-gradient(112.31deg, #950f0e 19.49%, #fbb034 98.51%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 100% auto;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+#ifr-gameplay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 999999;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Breakpoints theo chuẩn Bootstrap 5.5 */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.landing-marquee-container {
+    position: relative;
+    border: none;
+    height: 100px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1650px;
+}
+
+.marquee-wrapper {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.marquee {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3rem;
+    min-width: 100%;
+    animation: scrolls 90s linear infinite;
+}
+
+.marquee > div {
+    max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes scrolls {
+    0% {
+        transform: translateX(100%)
+    }
+
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+.landing-hero-section .hero-bg-light-1, .landing-hero-section .hero-bg-light-2, .landing-hero-section .hero-bg-light-3, .landing-hero-section .hero-bg-light-4 {
+    position: absolute;
+    mix-blend-mode: var(--hero-bg-light-mix-mode);
+    animation: swing 16s ease-in-out infinite;
+    transform-origin: 50% 0;
+    z-index: 1;
+    transform: matrix(.82, -.57, -.57, -.82, 0, 0);
+    filter: blur(69px);
+    opacity: .2;
+}
+
+.hero-bg-light-1 {
+    width: 371.21px;
+    height: 1163.18px;
+    left: 10%;
+    top: -150px;
+    border-radius: 50%;
+    background: var(--hero-bg-light-1);
+}
+
+.hero-bg-light-2 {
+    width: 91.43px;
+    height: 1147px;
+    left: 40%;
+    top: -150px;
+    background: var(--hero-bg-light-2);
+}
+
+.hero-bg-light-3 {
+    width: 73.25px;
+    height: 1147px;
+    left: 65%;
+    top: -150px;
+    background: var(--hero-bg-light-3);
+    opacity: .1;
+}
+
+.hero-bg-light-4 {
+    width: 91.43px;
+    height: 997px;
+    left: 90%;
+    top: 60px;
+    background: var(--hero-bg-light-4);
+}
+
+@keyframes swing {
+    0%, to {
+        transform: rotate(30deg)
+    }
+
+    50% {
+        transform: rotate(20deg)
+    }
+}
+
+.hero-bg-light-1, .hero-bg-light-2, .hero-bg-light-3, .hero-bg-light-4 {
+    pointer-events: none;
+}
